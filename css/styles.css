@@ -1,0 +1,275 @@
+/*load in web fonts*/
+
+@import 'https://fonts.googleapis.com/css?family=Playball';
+/*fix up for older browers to show new tags*/
+
+header,
+nav,
+main,
+footer,
+aside,
+article,
+section,
+video,
+audio,
+figure,
+figcaption {
+    display: block
+}
+/*global reset - sets all margins and padding to zero so all browsers display the same*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/*basic layout changes to the 'boxes'*/
+/*90% and max width 800-900 for mobiles*/
+/*div{
+*/
+/*border: solid 1px #ccc;*/
+/*}
+*/
+
+.main {
+    /*    center content in page - margin: top &btm left and rgt*/
+    
+    margin: 0 auto;
+    clear: both;
+}
+/*header and nav*/
+
+header {
+    width: 46%;
+    /*test*/
+    /*background-color: red;*/
+    
+    float: left;
+    /*    padding if changes % based width remember to use % 1% = 2% overall then deduct from width 50%-2%=48%*/
+    
+    padding: 2%;
+}
+nav {
+    width: 48%;
+    /*background-color: green;*/
+    
+    float: right;
+    padding: 1%;
+}
+/*big hero image*/
+
+#hero {
+    background-color: #1948c7;
+    /*    '..' takes me out of folder and up one folder level (out of css) and into images*/
+    
+    background-image: url(../images/iStock_84679751_web-small.jpg);
+    background-repeat: no-repeat;
+    /*   Center for cover to work*/
+    
+    background-position: center;
+    /*    cover to resize image to always cover screen*/
+    
+    background-size: cover;
+    clear: both;
+    height: 200px;
+    text-align: center;
+    padding: 10px 0;
+}
+#recipe1 {
+    text-align: center;
+}
+#entersite {
+    width: 100%;
+    margin: 0 auto;
+}
+#method {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    clear: both;
+    padding: 10px 0;
+}
+#cake {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/mainimage.png");
+    margin: 0 auto;
+    text-align: left;
+    float: left;
+    padding: 10px 0;
+}
+#ingredients {
+    width: 100%;
+    margin: auto 50px;
+    text-align: left;
+    float: left;
+    padding: 10px 0;
+}
+/*footer styles*/
+
+footer {
+    background-color: #1968c7;
+    padding: 2%;
+    clear: both;
+}
+#foot-copy {
+    width: 48%;
+    padding: 1%;
+    float: left;
+}
+#foot-social {
+    width: 46%;
+    padding: 2%;
+    float: right;
+    text-align: right;
+}
+/*detailed layout*/
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+nav ul li {
+    display: inline-block;
+}
+nav a:link,
+nav a:visited {
+    color: #e036e0;
+    /*    remove underline*/
+    
+    text-decoration: none;
+    /*    display setting as block (As current inline)so we can put padding etc*/
+    
+    display: block;
+    padding: 5px;
+}
+/* Change the link color on hover */
+
+nav ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+/*holding for carousal*/
+
+.carousal {
+    /*width:57%;*/
+    /*height: 400px;*/
+    
+    background: pink;
+    margin: 50px auto;
+}
+/*typography */
+
+h1,
+h2 {
+    font-family: Playball, Verdana, Arial, sans-serif !important;
+    font-weight: normal;
+    color: #506293;
+    padding: 0.6em 0;
+}
+p,
+li {
+    font-family: Playball, Verdana, Arial, sans-serif;
+    /*    using em measurement for font size better for accessable websites*/
+    
+    font-size: 1.0em;
+    color: #506293;
+    line-height: 1.4;
+    padding: 0.6em 0;
+}
+/*specific selector footer p - overrides above p styling*/
+
+footer p {
+    color: azure;
+    font-size: 1.0em;
+}
+#hero p,
+#hero h1 {
+    color: azure;
+    /*    shadow: x x blur color*/
+    
+    text-shadow: 2px 2px 3px rgba(54, 20, 20, 0.41);
+}
+.thefamilymenu {
+    font-size: 1.2em;
+}
+#contact {
+    color: azure;
+    font-size: 1.4em;
+    font-style: italic;
+}
+#ingredients li {
+    font-family: Playball, Verdana, Arial, sans-serif;
+    /*    using em measurement for font size better for accessable websites*/
+    
+    font-size: 1.7em;
+    color: #506293;
+    line-height: 0.1;
+    padding: 0.6em 0;
+}
+/*style for button like link*/
+
+#entersite {
+    color: aliceblue !important;
+    background-color: lightgrey;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 50%;
+}
+/*useful classes*/
+
+.clr-bth {
+    clear: both;
+}
+#myCarousel {
+    margin-bottom: 10px;
+}
+/*form styling*/
+
+form {
+    width: 60%;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    padding: 3%;
+}
+label {
+    font-family: Playball, Verdana, Arial, sans-serif;
+}
+form div {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+#button {
+    text-align: center;
+}
+button {
+    font-family: Playball, Verdana, Arial, sans-serif;
+    color: azure;
+    background-color: #de1010;
+    width: 36%;
+}
+/*media queries*/
+/*for larger screens - find the breakpoint*/
+
+@media only screen and (min-width: 620px) {
+    .main p,
+    h1,
+    h2 {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+    #bigfooter {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+    footer {
+        max-width: 520px;
+        margin: 50px auto;
+    }
+    /*#cake{*/
+    /*background-image: url("../images/mainimage.png")*/
+    /*}*/
+}
